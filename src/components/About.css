@@ -1,0 +1,150 @@
+.about {
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #1a3a4a, #162d3d);
+  min-height: 100vh;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about-header h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4ff, #7c3aed);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto 100px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text p {
+  color: #d0d0d0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.skills-section h3 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.skill-category h4 {
+  color: #00d4ff;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category li {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  position: relative;
+  padding-left: 15px;
+}
+
+.skill-category li::before {
+  content: '▸';
+  color: #7c3aed;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat {
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.stat:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.stat h4 {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.stat p {
+  color: #b0b0b0;
+  margin: 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 20px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
